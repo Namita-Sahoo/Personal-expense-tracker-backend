@@ -41,7 +41,7 @@ exports.getMonthlySummary = (req, res) => {
      FROM expenses GROUP BY month ORDER BY month ASC`,
     (err, rows) => {
       if (err) return res.status(500).json({ error: 'Failed to fetch monthly summary' });
-      console.log(rows);
+      // console.log(rows);
       res.json(rows);
     }
   );
