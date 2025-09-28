@@ -10,3 +10,8 @@ CREATE TABLE expenses (
   category VARCHAR(100),
   notes TEXT
 );
+
+SELECT DATE_FORMAT(date, '%Y-%m') AS month, SUM(amount) AS total 
+FROM expenses 
+GROUP BY month 
+ORDER BY month ASC;
